@@ -1,0 +1,31 @@
+:root { color-scheme: light; --ink:#172d29; --green:#176547; --line:#b7cdc1; }
+* { box-sizing:border-box; }
+html { font-size:100%; scroll-padding-top:1rem; }
+body { margin:0; color:var(--ink); background:#fcfdfb; font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif; font-size:1.125rem; line-height:1.8; overflow-wrap:anywhere; }
+header,main,footer { width:min(100% - 2rem, 50rem); margin-inline:auto; }
+header { padding-block:1.5rem; border-bottom:2px solid var(--green); }
+.series { font-size:.875rem; letter-spacing:.05em; color:var(--green); }
+nav { display:flex; flex-wrap:wrap; gap:.5rem 1.25rem; font-size:1rem; }
+nav a[aria-current] { font-weight:700; text-decoration-thickness:3px; }
+main { padding-block:2rem 4rem; }
+h1,h2,h3 { color:var(--green); line-height:1.45; overflow-wrap:anywhere; }
+h1 { font-size:2rem; margin:0 0 1.5rem; }
+h2 { font-size:1.5rem; margin:3rem 0 1rem; padding-top:1rem; border-top:1px solid var(--line); }
+h3 { font-size:1.15rem; margin:2rem 0 .75rem; }
+p,ul,ol { margin-block:.75rem 1rem; }
+li { margin-block:.5rem; }
+a { color:#075b9a; text-underline-offset:.18em; }
+a:focus-visible, [tabindex]:focus-visible { outline:3px solid #965400; outline-offset:4px; }
+code { font: .94em/1.6 ui-monospace,"D2Coding",monospace; background:#eef3f0; padding:.1em .25em; white-space:break-spaces; }
+pre { padding:1rem; background:#eef3f0; overflow:auto; white-space:pre-wrap; }
+pre code { padding:0; }
+blockquote { margin:1.5rem 0; border-left:4px solid var(--green); padding:.2rem 1rem; }
+.table-scroll { max-width:100%; overflow-x:auto; margin-block:1.5rem; }
+table { border-collapse:collapse; width:100%; font-size:1rem; line-height:1.7; }
+th,td { border:1px solid var(--line); padding:.9rem; text-align:left; vertical-align:top; min-width:6rem; }
+th { background:#eaf2ed; }
+footer { border-top:1px solid var(--line); padding-block:1rem 2rem; font-size:.94rem; }
+.skip { position:absolute; top:.5rem; left:.5rem; padding:.5rem 1rem; background:white; transform:translateY(-200%); }
+.skip:focus { transform:translateY(0); z-index:2; }
+@media (max-width:35rem) { body { font-size:1rem; } h1 { font-size:1.65rem; } h2 { font-size:1.3rem; } th,td { padding:.6rem; } }
+@media print { nav,.skip { display:none; } body { font-size:12pt; line-height:1.6; background:white; } h2,h3 { break-after:avoid; } }
