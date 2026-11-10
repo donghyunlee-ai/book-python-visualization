@@ -10,6 +10,8 @@
 | `appendix_c.ipynb` | 부록 C "본문이 미룬 코드"의 C01–C10(C10은 `ch11_app/`의 앱을 검사) |
 | `ch11_app/` | 11장 Streamlit 앱(A01–A04를 이어 적은 `app.py`)과 13장 배포용 `requirements.txt` |
 | `asos_2025_daily.csv` | 12장 저장본 — 기상청 ASOS 일자료 2025년 서울·부산·강릉·제주 1,460행(12장 C05가 만드는 것과 같은 파일) |
+| `asos_stations.csv` | 12.7절 지점 좌표 — ASOS 97지점의 번호·이름·위도·경도·고도(기상청 API허브 지상관측 지점정보, 2025-12-31 기준). 키가 있어도 C12에 필요 |
+| `asos_2025_national_daily.csv` | 12.7절 전국 저장본 — 97지점 2025년 일자료 35,404행(12장 C12가 만드는 것과 같은 파일) |
 | `requirements.txt` | 이 책의 출력을 확인한 버전 |
 | `ERRATA.md` | 정오표 |
 | `extra-practice/` | 5–8장 뒤 낯선 표로 질문·관측 단위·집계를 정하는 선택 과제와 별도 풀이 |
@@ -70,6 +72,8 @@ JupyterLab에서 `ch01.ipynb`를 열고 **Python (vis-book)** 커널을 선택�
 from google.colab import files
 files.upload()  # asos_2025_daily.csv 선택
 ```
+
+12.7절(C12부터)은 키가 있어도 `asos_stations.csv`가 필요합니다. 키가 없으면 `asos_2025_national_daily.csv`도 함께 올립니다(`files.upload()` 창에서 여러 파일을 한 번에 고를 수 있습니다).
 
 `FileNotFoundError`가 나면 먼저 CSV의 파일명과 위치를 확인합니다. 저장본의 서울·부산·강릉·제주 2025년 자료로 12장의 차트와 연습을 이어 갈 수 있습니다.
 
